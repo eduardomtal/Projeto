@@ -192,7 +192,7 @@ body {
     width: 50%;
     display: block;
     margin: 0 auto;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
 }
 
 .ellie {
@@ -245,9 +245,10 @@ body {
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: center;
+    
 }
 
-.ellie:hover .overlay__ellie {
+.container:hover .overlay__ellie {
     opacity: 1;
 }
 
@@ -373,24 +374,55 @@ body {
 /* Fim dos vídeos */
 
 /* Curiosidades */
+@keyframes appear {
+                from {
+                    opacity: 0.6;
+                    scale: 0.7;
+                }
+                to {
+                    opacity: 1;
+                    scale: 1;
+                }
+}
+
+    #curiosidades .conteudo {
+                animation: appear linear;
+                animation-timeline: view();
+                animation-range: entry 0;
+    }
+   
+
 #curiosidades .titulo img {
     width: 40%;
     display: block;
     margin: 0 auto;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
+#curiosidades h2 {
+    text-align: center;
+    color: var(--cor2);
+    background-color: var(--cor4);
+    border-radius: 20px;
+    font-size: 30px;
+    margin-bottom: 100px;
+    line-height: 1.5;
+    padding: 15px;
+}
 #curiosidades .conteudo img {
     margin-top: 120px;
     width: 100%;
     display: block;
     margin: 0 auto;
     float: left;
+    border: solid 2px var(--cor4);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.795);
+    border-radius: 20px;
 }
 
 #curiosidades .texto {
     margin-top: 20px;
-    margin-bottom: 300px;
+    margin-bottom: 200px;
     text-align: center;
     color: var(--cor2);
     font-size: 20px;
