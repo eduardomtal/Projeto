@@ -1,0 +1,425 @@
+@font-face {
+    font-family: "TLOU";
+    src: url(../fonts/D-DIN.otf);
+}
+
+/* Variáveis de cores */
+:root {
+    --cor1: #3d494d;
+    --cor2: #ffffff;
+    --cor3: #010300;
+    --cor4: #0000007c;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "TLOU";
+}
+
+body {
+    padding-top: 100px;
+    background-image: url(../imagens/gif4.gif);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+.container {
+    max-width: 930px;
+    margin: 0 auto;
+}
+
+/* Topo */
+#cabecalho {
+    background-color: var(--cor3);
+    margin-bottom: 30px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+}
+
+#cabecalho #logo {
+    width: 100px;
+}
+
+#cabecalho .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menu ul {
+    display: flex;
+}
+
+#menu ul li {
+    list-style: none;
+}
+
+#menu ul li a {
+    color: var(--cor2);
+    text-decoration: none;
+    display: block;
+    padding: 20px 30px;
+    transition: all .2s linear;
+}
+
+#menu ul a:hover { 
+    background-color: var(--cor2);
+    color: var(--cor3);
+    transition: all 0.3s;
+}
+
+#menu .submenu {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: var(--cor3);
+}
+
+#menu ul li a:hover {
+    background-color: var(--cor2);
+}
+
+#menu ul li:hover .submenu {
+    display: block; 
+    visibility: visible;
+}
+
+/* Fim do topo */
+
+/* Slider */
+#slider .container {
+    margin-bottom: 200px;
+}
+#slider img {
+    margin-right: 0 auto;
+}
+
+/* Sinopse */
+#sinopse img {
+    margin-top: 50px;
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+#sinopse .paragrafo  {
+    background-color: var(--cor4);
+    border-radius: 30px;
+    padding: 15px;
+}
+#sinopse p {
+    text-align: center;
+    color: var(--cor2);
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+/* Fim da sinopse */
+
+/* Simbologias */ 
+#simbologias img{
+    margin-top: 50px;
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+#simbologias .paragrafo  {
+    background-color: var(--cor4);
+    border-radius: 30px;
+    padding: 15px;
+}
+#simbologias p {
+    text-align: justify;
+    color: var(--cor2);
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
+/* Fim das simbologias */
+
+/* Personagens */
+#personagens img {
+    margin-top: 70px;
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+#personagens h2 {
+    text-align: center;
+    color: var(--cor2);
+    background-color: var(--cor4);
+    border-radius: 20px;
+    font-size: 30px;
+    margin-top: 50px;
+    margin-bottom: 250px;
+    line-height: 1.5;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.ellie {
+    margin: 0 auto;
+}
+
+#cards {
+    margin-top: 200px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 100px;
+}
+
+#cards img {
+    width: 100%;
+    height: 100%;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: all .3s linear;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+#cards img:hover {
+    transform: scale(1.1);
+}
+
+.ellie {
+    position: relative;
+    width: 80%;
+}
+
+.imagem__ellie {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.overlay__ellie {
+    color: var(--cor2);
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+    pointer-events: none; /* para o overlay não atrapalhar o hover */
+}
+
+.imagem__ellie:hover .overlay__ellie {
+    opacity: 1;
+}
+
+.titulo__ellie {
+    font-size: 20px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.descricao__ellie {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Fim dos personagens */
+
+/* Galeria */
+#galeria .titulo img {
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+#galeria h2 {
+    text-align: center;
+    color: var(--cor2);
+    background-color: var(--cor4);
+    border-radius: 20px;
+    font-size: 30px;
+    margin-top: 50px;
+    margin-bottom: 150px;
+    line-height: 1.5;
+    padding: 15px;
+}
+
+.galeria__imagens {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+    row-gap: 200px;
+    gap: 200px;
+    list-style: none;
+}
+
+.galeria__imagens img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: all .3s linear;
+    border: solid 2px var(--cor4);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.795);
+}
+
+/* Fim da galeria */
+
+/* Vídeos (Gameplay) */
+#gameplay .titulo img {
+    width: 45%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+#gameplay h2 {
+    text-align: center;
+    color: var(--cor2);
+    background-color: var(--cor4);
+    border-radius: 20px;
+    font-size: 25px;
+    margin-top: 50px;
+    margin-bottom: 150px;
+    line-height: 1.5;
+    padding: 15px;
+}
+
+#gameplay .container .videos {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    width: 100%;
+    row-gap: 100px;
+}
+
+
+
+/* Fim dos vídeos */
+
+/* Curiosidades */
+#curiosidades .titulo img {
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+#curiosidades h2 {
+    text-align: center;
+    color: var(--cor2);
+    background-color: var(--cor4);
+    border-radius: 20px;
+    font-size: 30px;
+    margin-bottom: 100px;
+    line-height: 1.5;
+    padding: 15px;
+}
+#curiosidades .conteudo img {
+    margin-top: 120px;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    float: left;
+    border: solid 2px var(--cor4);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.795);
+    border-radius: 20px;
+}
+
+#curiosidades .texto {
+    margin-top: 20px;
+    margin-bottom: 200px;
+    text-align: center;
+    color: var(--cor2);
+    font-size: 20px;
+    background-color: var(--cor4);
+    border-radius: 20px;
+    padding: 15px;
+}
+
+/* Fim das curiosidades */
+
+/* Rodapé */
+.rodape {
+    background-color: var(--cor3);
+    height: 100%;
+    text-align: center;
+    color: var(--cor2);
+    padding: 20px;
+    margin-top: 150px;
+}
+
+.rodape a {
+    text-decoration: none;
+    color: var(--cor2);
+}
+
+.rodape a:hover {
+    color: var(--cor1);
+    transition: all 0.3s;
+}
+/* Fim do rodapé */
+
+/* Animações de entrada */
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+#sinopse {
+  animation: appear 0.5s linear forwards;
+  animation-timeline: view();
+  animation-range: entry 0;
+}
+
+#simbologias .paragrafo,
+#simbologias .titulo {
+  animation: appear 0.5s linear forwards;
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
+}
+
+
+#cards .ellie {
+  animation: appear 0.5s linear forwards;
+  animation-timeline: view();
+  animation-range: entry 0 cover 40%;
+}
+
+#galeria .transicao {
+                animation: appear linear;
+                animation-timeline: view();
+                animation-range: entry 0;
+}
+
+#gameplay .container .video1, .video2 {
+                animation: appear linear;
+                animation-timeline: view();
+                animation-range: entry 0;
+}
+
+#curiosidades .conteudo {
+                animation: appear linear;
+                animation-timeline: view();
+                animation-range: entry 0 cover 30%;
+}
+   
